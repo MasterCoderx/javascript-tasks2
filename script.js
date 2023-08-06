@@ -23,3 +23,19 @@ function closeCompare(a, b, margin) {
 
 console.log(closeCompare(1, 2, 0));
 
+// Exercise 3
+
+function xor(a, b) {
+    if (a === true && b === false)
+        return true;
+    return a === false && b === true;
+}
+
+console.log(xor(false, true))
+
+function or(a, b) {
+    return a === true || b === true;
+
+}
+console.log(or(true, false))
+
