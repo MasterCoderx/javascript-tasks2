@@ -7,7 +7,7 @@ function setAlarm(employed, vacation) {
     return false;
 }
 
-console.log(setAlarm(true, false))
+console.log(setAlarm(true, false));
 
 // Exercise 2
 
@@ -18,7 +18,7 @@ function closeCompare(a, b, margin) {
     if (a < b) {
         return -1;
     }
-    return 1
+    return 1;
 }
 
 console.log(closeCompare(1, 2, 0));
