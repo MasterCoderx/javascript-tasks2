@@ -78,3 +78,20 @@ function carRentalCost(numberOfDays) {
 console.log(carRentalCost(6));
 console.log(carRentalCost(8));
 console.log(carRentalCost(2));
+
+// Exercise 6
+
+function convertToEuropeanSystem(FloorInAmericanSystem) {
+    if (FloorInAmericanSystem > 13) {
+        return FloorInAmericanSystem -2;
+    }
+    if (FloorInAmericanSystem === 13) {
+        return "Due to superstition, 13th floor does not exist in the American system. Please try entering another floor level value";
+    }
+    if (FloorInAmericanSystem <= 0) {
+        return FloorInAmericanSystem;
+    }
+    return FloorInAmericanSystem - 1;
+}
+
+console.log(convertToEuropeanSystem(0));
