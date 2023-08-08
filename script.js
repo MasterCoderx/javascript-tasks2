@@ -43,9 +43,10 @@ console.log(or(true, false))
 
 function callFunction(boolean, functionOne, functionTwo) {
     if (boolean === true) {
-        return functionOne;
+        return functionOne(functionOne);
     }
-    return functionTwo
+    return functionTwo(functionTwo)
 }
 
-callFunction(true, function() {console.log('True')}, function(y) {console.log('False')});
+callFunction(false, function() {console.log('True')}, function(y) {console.log('False')});
+
