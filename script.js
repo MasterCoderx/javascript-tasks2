@@ -58,3 +58,23 @@ callFunction(
     }
 );
 
+// Exercise 5
+
+const pricePerDay = 40; // [$]
+const firstLevelDiscount = -20; // [$]
+const secondLevelDiscount = -50; // [$]
+
+function carRentalCost(numberOfDays) {
+    const totalPrice = pricePerDay * numberOfDays;
+    if (numberOfDays >= 7) {
+        return totalPrice + secondLevelDiscount;
+    }
+    if (numberOfDays >= 3) {
+        return totalPrice + firstLevelDiscount;
+    }
+    return totalPrice;
+}
+
+console.log(carRentalCost(6));
+console.log(carRentalCost(8));
+console.log(carRentalCost(2));
