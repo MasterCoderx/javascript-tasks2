@@ -41,21 +41,11 @@ console.log(or(true, false))
 
 // Exercise 4
 
-function innerFunctionOne(outerFunctionOne) {
-    const functionOne = outerFunctionOne;
-    return functionOne;
-}
-function innerFunctionTwo(outerFunctionTwo) {
-    const functionTwo = outerFunctionTwo;
-    return functionTwo;
-}
-function callFunction(boolean, outerFunctionOne, outerFunctionTwo) {
-    const firstFunction = innerFunctionOne(outerFunctionOne);
-    const secondFunction = innerFunctionTwo(outerFunctionTwo);
+function callFunction(boolean, functionOne, functionTwo) {
     if (boolean === true) {
-        return firstFunction;
+        return functionOne;
     }
-    return secondFunction;
+    return functionTwo
 }
 
-console.log(callFunction(true, function() {console.log('True')}, function() {console.log('False')}));
+callFunction(true, function() {console.log('True')}, function(y) {console.log('False')});
