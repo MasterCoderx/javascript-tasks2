@@ -95,3 +95,29 @@ function convertToEuropeanSystem(floorInAmericanSystem) {
 }
 
 console.log(convertToEuropeanSystem(0));
+
+// Exercise 7
+
+function rockPaperScissorsExtended(playerOne, playerTwo) {
+    if (playerOne === 'scissors' && (playerTwo === 'paper' || playerTwo === 'lizard')) {
+        return 'Player 1 Won!';
+    }
+    if (playerOne === 'paper' && (playerTwo === 'rock' || playerTwo === 'spock')) {
+        return 'Player 1 Won!';
+    }
+    if (playerOne === 'rock' && (playerTwo === 'lizard' || playerTwo === 'scissors')) {
+        return 'Player 1 Won!';
+    }
+    if (playerOne === 'lizard' && (playerTwo === 'spock' || playerTwo === 'paper')) {
+        return 'Player 1 Won!';
+    }
+    if (playerOne === 'spock' && (playerTwo === 'scissors' || playerTwo === 'rock')) {
+        return 'Player 1 Won!';
+    }
+    if (playerOne === playerTwo) {
+        return 'Draw!';
+    }
+    return 'Player 2 Won!';
+}
+
+console.log(rockPaperScissorsExtended('lizard', 'spock'));
